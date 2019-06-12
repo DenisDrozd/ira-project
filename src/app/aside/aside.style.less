@@ -8,11 +8,26 @@
     .transition(width);
     width: 80px;
     height: 100%;
-    margin-top: 80px;
     padding: 28px 0;
     box-shadow: 4px 0 12px 0 fade(@black, 56);
     color: @aside-color;
     background-color: @aside-bg;
+
+    @media @mobile {
+        margin-top: 64px;
+    }
+
+    @media @tablet-interval {
+        margin-top: 68px;
+    }
+
+    @media @desktop-interval {
+        margin-top: 72px;
+    }
+
+    @media @desktop-lg-min {
+        margin-top: 80px;
+    }
 
     &:hover {
         width: 320px;
