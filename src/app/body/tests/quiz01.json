@@ -6,22 +6,18 @@
             "answers": [
                 {
                     "answer": "Только на диске D",
-                    "right": false,
                     "point": 0
                 },
                 {
                     "answer": "Только на рабочем столе и в уже созданных папках",
-                    "right": false,
                     "point": 0
                 },
                 {
                     "answer": "Только в тех папках, в которых есть файлы",
-                    "right": false,
                     "point": 0
                 },
                 {
                     "answer": "Где угодно",
-                    "right": true,
                     "point": 0
                 }
             ],
@@ -33,22 +29,18 @@
             "answers": [
                 {
                     "answer": "Только на диске D",
-                    "right": false,
                     "point": 0
                 },
                 {
                     "answer": "Только на рабочем столе и в уже созданных папках",
-                    "right": false,
                     "point": 0
                 },
                 {
                     "answer": "Только в тех папках, в которых есть файлы",
-                    "right": false,
                     "point": 0
                 },
                 {
                     "answer": "Где угодно",
-                    "right": true,
                     "point": 0
                 }
             ],
@@ -60,22 +52,18 @@
             "answers": [
                 {
                     "answer": "Только на диске D",
-                    "right": false,
                     "point": 0
                 },
                 {
                     "answer": "Только на рабочем столе и в уже созданных папках",
-                    "right": false,
                     "point": 0
                 },
                 {
                     "answer": "Только в тех папках, в которых есть файлы",
-                    "right": false,
                     "point": 0
                 },
                 {
                     "answer": "Где угодно",
-                    "right": true,
                     "point": 0
                 }
             ],
