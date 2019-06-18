@@ -1,0 +1,161 @@
+@import 'variables';
+
+.font (@size: 15px, @line-height: 'none') {
+    font-size: @size;
+    line-height: @line-height;
+    font-display: fallback;
+}
+
+.h1() {
+    @media @mobile {
+        .font(32px, 40px);
+    }
+
+    @media @tablet-interval {
+        .font(48px, 56px);
+    }
+
+    @media @desktop-interval {
+        .font(56px, 64px);
+    }
+
+    @media @desktop-lg-min {
+        .font(72px, 80px);
+    }
+}
+
+.h2() {
+    @media @mobile {
+        .font(28px, 36px);
+    }
+
+    @media @tablet-interval {
+        .font(40px, 48px);
+    }
+
+    @media @desktop-interval {
+        .font(48px, 56px);
+    }
+
+    @media @desktop-lg-min {
+        .font(56px, 64px);
+    }
+}
+
+.h3() {
+    @media @mobile {
+        .font(24px, 32px);
+    }
+
+    @media @tablet-interval {
+        .font(28px, 36px);
+    }
+
+    @media @desktop-interval {
+        .font(32px, 40px);
+    }
+
+    @media @desktop-lg-min {
+        .font(40px, 48px);
+    }
+}
+
+.h4() {
+    @media @mobile {
+        .font(20px, 28px);
+    }
+
+    @media @tablet-interval {
+        .font(24px, 32px);
+    }
+
+    @media @desktop-interval {
+        .font(24px, 32px);
+    }
+
+    @media @desktop-lg-min {
+        .font(32px, 40px);
+    }
+}
+
+.h5() {
+    @media @mobile {
+        .font(16px, 24px);
+    }
+
+    @media @tablet-interval {
+        .font(20px, 28px);
+    }
+
+    @media @desktop-interval {
+        .font(20px, 28px);
+    }
+
+    @media @desktop-lg-min {
+        .font(24px, 32px);
+    }
+}
+
+.p1() {
+    @media @mobile {
+        .font(20px, 28px);
+    }
+
+    @media @tablet-interval {
+        .font(20px, 28px);
+    }
+
+    @media @desktop-interval {
+        .font(24px, 32px);
+    }
+
+    @media @desktop-lg-min {
+        .font(24px, 32px);
+    }
+}
+
+.p2() {
+    @media @mobile {
+        .font(16px, 24px);
+    }
+
+    @media @tablet-interval {
+        .font(16px, 24px);
+    }
+
+    @media @desktop-interval {
+        .font(20px, 28px);
+    }
+
+    @media @desktop-lg-min {
+        .font(20px, 28px);
+    }
+}
+
+.p3() {
+    @media @mobile {
+        .font(14px, 20px);
+    }
+
+    @media @tablet-interval {
+        .font(14px, 20px);
+    }
+
+    @media @desktop-interval {
+        .font(16px, 24px);
+    }
+
+    @media @desktop-lg-min {
+        .font(16px, 24px);
+    }
+}
+
+.p4() {
+    @media @tablet {
+        .font(12px, 16px);
+    }
+
+    @media @desktop-min {
+        .font(14px, 20px);
+    }
+}
