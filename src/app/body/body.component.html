@@ -1,5 +1,58 @@
 <div class="body">
-    <div class="test">
-        Separator
+    <div class="row row_center">
+        <div class="col_extrasmall-12 col_small-12 col_medium-10 col_large-8">
+            <div class="row">
+                <ng-container *ngIf="!selectedQuiz; else quiz">
+                    <div class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
+                        <div class="quiz-list-title quiz-list-title_first">
+                            Раздел 1
+                        </div>
+                    </div>
+                    <ng-container *ngFor="let quiz of quizList;">
+                        <div class="col_extrasmall-12 col_small-12 col_medium-6 col_large-4">
+                            <div class="island"
+                                 (click)="selectQuiz(quiz)">
+                                <div class="island-title">
+                                    {{quiz.default.topic}}
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <div class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
+                        <div class="quiz-list-title">
+                            Раздел 2
+                        </div>
+                    </div>
+                </ng-container>
+
+                <ng-template #quiz>
+                    <div class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
+                        <div class="quiz-list-title quiz-list-title_first">
+                            {{selectedQuiz.default.topic}}
+                        </div>
+                    </div>
+                    <div class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
+                        <div *ngFor="let answers of selectedQuiz.default.list; let answersIndex = index"
+                             class="quiz-answers">
+                            <div class="quiz-answers-title">
+                                {{answers.question}}
+                            </div>
+                            <div *ngFor="let answer of answers.answers; let answerIndex = index"
+                                 class="quiz-answer"
+                                 [class.quiz-answer_selected]="answers.selected === answerIndex"
+                                 (click)="selectedQuiz.default.list[answersIndex].selected = answerIndex">
+                                {{answer.answer}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="cursor: pointer; padding: 20px; background: grey;"
+                         (click)="selectedQuiz = false">
+                        Это Кнопка НАЗАД, временная
+                    </div>
+                </ng-template>
+
+            </div>
+        </div>
     </div>
 </div>

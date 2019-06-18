@@ -1,0 +1,86 @@
+{
+    "topic": "Опросник на 60 вопросов",
+    "list": [
+        {
+            "question": "1. Создать папку можно:",
+            "answers": [
+                {
+                    "answer": "Только на диске D",
+                    "right": false,
+                    "point": 0
+                },
+                {
+                    "answer": "Только на рабочем столе и в уже созданных папках",
+                    "right": false,
+                    "point": 0
+                },
+                {
+                    "answer": "Только в тех папках, в которых есть файлы",
+                    "right": false,
+                    "point": 0
+                },
+                {
+                    "answer": "Где угодно",
+                    "right": true,
+                    "point": 0
+                }
+            ],
+            "rightAnswer": 4,
+            "selected": null
+        },
+        {
+            "question": "2. Создать папку можно:",
+            "answers": [
+                {
+                    "answer": "Только на диске D",
+                    "right": false,
+                    "point": 0
+                },
+                {
+                    "answer": "Только на рабочем столе и в уже созданных папках",
+                    "right": false,
+                    "point": 0
+                },
+                {
+                    "answer": "Только в тех папках, в которых есть файлы",
+                    "right": false,
+                    "point": 0
+                },
+                {
+                    "answer": "Где угодно",
+                    "right": true,
+                    "point": 0
+                }
+            ],
+            "rightAnswer": 4,
+            "selected": null
+        },
+        {
+            "question": "3. Создать папку можно:",
+            "answers": [
+                {
+                    "answer": "Только на диске D",
+                    "right": false,
+                    "point": 0
+                },
+                {
+                    "answer": "Только на рабочем столе и в уже созданных папках",
+                    "right": false,
+                    "point": 0
+                },
+                {
+                    "answer": "Только в тех папках, в которых есть файлы",
+                    "right": false,
+                    "point": 0
+                },
+                {
+                    "answer": "Где угодно",
+                    "right": true,
+                    "point": 0
+                }
+            ],
+            "rightAnswer": 4,
+            "selected": null
+        }
+    ]
+}
