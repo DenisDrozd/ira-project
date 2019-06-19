@@ -46,12 +46,24 @@
 }
 
 .quiz-answers {
+    .transition(background-color);
+    background-color: @white;
     margin-top: 24px;
+
+    &_empty {
+        background-color: fade(@color-palette-5, 16);
+    }
 }
 
 .quiz-answers-title {
     .p1();
     margin-bottom: 12px;
+}
+
+.quiz-answer-container {
+    .transition(max-height);
+    max-height: 100%;
+    overflow: hidden;
 }
 
 .quiz-answer {
@@ -79,5 +91,10 @@
         &:before {
             content: '+';
         }
+    }
+
+    &&_correct {
+        color: @white;
+        background-color: @color-palette-2;
     }
 }

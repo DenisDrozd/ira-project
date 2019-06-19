@@ -32,25 +32,43 @@
                         </div>
                     </div>
                     <div class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
-                        <div *ngFor="let answers of selectedQuiz.default.list; let answersIndex = index"
-                             class="quiz-answers">
-                            <div class="quiz-answers-title">
-                                {{answers.question}}
+                        <ng-container *ngFor="let answers of selectedQuiz.default.list; let answersIndex = index">
+                            <div *ngIf="!(successTest && checkQuestion(answers))"
+                                 [id]="'id' + (answersIndex + 1)"
+                                 class="quiz-answers"
+                                 [class.quiz-answers_empty]="answers.selected === null && !firstCheck">
+                                <div class="quiz-answers-title">
+                                    {{answers.question}}
+                                </div>
+                                <div class="quiz-answer-container">
+                                    <div *ngFor="let answer of answers.answers; let answerIndex = index"
+                                         class="quiz-answer"
+                                         [class.quiz-answer_correct]="successTest && highlightError(answers, answerIndex)"
+                                         [class.quiz-answer_selected]="answers.selected === answerIndex"
+                                         (click)="selectedQuiz.default.list[answersIndex].selected = answerIndex">
+                                        {{answer.answer}}
+                                    </div>
+                                </div>
                             </div>
-                            <div *ngFor="let answer of answers.answers; let answerIndex = index"
-                                 class="quiz-answer"
-                                 [class.quiz-answer_selected]="answers.selected === answerIndex"
-                                 (click)="selectedQuiz.default.list[answersIndex].selected = answerIndex">
-                                {{answer.answer}}
-                            </div>
-                        </div>
+                        </ng-container>
+
                     </div>
 
+                    <div *ngIf="!successTest"
+                         style="cursor: pointer; padding: 20px; background: grey;"
+                         (click)="checkResult()">
+                        Проверка результата
+                    </div>
                     <div style="cursor: pointer; padding: 20px; background: grey;"
                          (click)="selectedQuiz = false">
                         Это Кнопка НАЗАД, временная
                     </div>
+                    <div *ngIf="successTest"
+                         class="">
+                        Набрано {{result}} баллов из {{selectedQuiz.default.list.length}}
+                    </div>
                 </ng-template>
+
 
             </div>
         </div>
