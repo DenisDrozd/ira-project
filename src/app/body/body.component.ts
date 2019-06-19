@@ -11,10 +11,7 @@ export class BodyComponent {
     selectedQuiz;
 
     quizList = [
-        q01,
-        q02,
-        q02,
-        q02
+        q01
     ];
 
     selectQuiz(list) {
