@@ -70,6 +70,10 @@
 
                     </div>
 
+                    <div *ngIf="successTest">
+                        Результат принят
+                    </div>
+
                     <div *ngIf="!successTest"
                          style="cursor: pointer; padding: 20px; background: grey;"
                          (click)="checkResult()">
