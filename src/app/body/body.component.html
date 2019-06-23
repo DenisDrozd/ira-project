@@ -4,11 +4,6 @@
             <div class="row">
                 <ng-container *ngIf="!compeleAllTest">
                     <ng-container *ngIf="!selectedQuiz; else quiz">
-                        <div class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
-                            <div class="quiz-list-title quiz-list-title_first">
-                                Раздел 1 с множеством вопросов
-                            </div>
-                        </div>
                         <ng-container *ngFor="let quiz of quizList01;">
                             <div class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
                                 <div class="island"
@@ -19,12 +14,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </ng-container>
-                        <div class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
-                            <div class="quiz-list-title">
-                                Раздел 2 с вопрососами, где будет график
+                            <div class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
+                                <div style="border-top: 1px solid #b99b69; width: 100%; margin-bottom: 24px;"></div>
                             </div>
-                        </div>
+                        </ng-container>
                         <ng-container *ngFor="let quiz of quizList02; let index = index">
                             <div class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
                                 <div class="island"
@@ -101,7 +94,7 @@
                     <!--</div>-->
                 </ng-template>
 
-                <div *ngIf="compeleAllTest"
+                <div *ngIf="compeleAllTest || true"
                      class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
                     <ng-container *ngIf="sumPoints() >= 203">
                         <div class="graph-title">

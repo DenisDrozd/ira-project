@@ -95,7 +95,7 @@ export class BodyComponent {
             middle: 40,
             high: 60,
             limit: 80,
-            topic: 'Тревожность'
+            topic: 'Отсутствие тревожности'
         }
     };
 
