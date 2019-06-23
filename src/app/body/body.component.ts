@@ -5,6 +5,7 @@ import * as q03 from './tests/quiz03.json';
 import * as q04 from './tests/quiz04.json';
 import * as q05 from './tests/quiz05.json';
 import * as q06 from './tests/quiz06.json';
+import * as q07 from './tests/quiz07.json';
 
 @Component({
     selector: 'app-body',
@@ -27,7 +28,8 @@ export class BodyComponent {
         q03,
         q04,
         q05,
-        q06
+        q06,
+        q07
     ];
 
     complete = {
@@ -48,6 +50,10 @@ export class BodyComponent {
             ready: false
         },
         4: {
+            points: 0,
+            ready: false
+        },
+        5: {
             points: 0,
             ready: false
         },

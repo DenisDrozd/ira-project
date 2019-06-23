@@ -1,0 +1,474 @@
+{
+    "topic": "Тревожность при работе за компьютером",
+    "list": [
+        {
+            "question": " 1. Я спокоен при выполнении заданий ",
+            "answers": [
+                {
+                    "answer": "Никогда ",
+                    "point": 1
+                },
+                {
+                    "answer": "Почти всегда ",
+                    "point": 3
+                },
+                {
+                    "answer": "Почти никогда",
+                    "point": 2
+                },
+                {
+                    "answer": "Часто",
+                    "point": 4
+                }
+            ],
+            "rightAnswer": 0,
+            "selected": null
+        },
+        {
+            "question": "2. Мне ничто не угрожает ",
+            "answers": [
+                {
+                    "answer": "Никогда ",
+                    "point": 1
+                },
+                {
+                    "answer": "Почти всегда ",
+                    "point": 3
+                },
+                {
+                    "answer": "Почти никогда",
+                    "point": 2
+                },
+                {
+                    "answer": "Часто",
+                    "point": 4
+                }
+            ],
+            "rightAnswer": 0,
+            "selected": null
+        },
+        {
+            "question": "3. При выполнении практических заданий я нахожусь в напряжении",
+            "answers": [
+                {
+                    "answer": "Никогда ",
+                    "point": 1
+                },
+                {
+                    "answer": "Почти всегда ",
+                    "point": 3
+                },
+                {
+                    "answer": "Почти никогда",
+                    "point": 2
+                },
+                {
+                    "answer": "Часто",
+                    "point": 4
+                }
+            ],
+            "rightAnswer": 0,
+            "selected": null
+        },
+        {
+            "question": "4. Я внутренне скован на занятиях ",
+            "answers": [
+                {
+                    "answer": "Никогда ",
+                    "point": 4
+                },
+                {
+                    "answer": "Почти всегда ",
+                    "point": 2
+                },
+                {
+                    "answer": "Почти никогда",
+                    "point": 3
+                },
+                {
+                    "answer": "Часто",
+                    "point": 1
+                }
+            ],
+            "rightAnswer": 0,
+            "selected": null
+        },
+        {
+            "question": "5. Я чувствую себя свободно на занятиях.",
+            "answers": [
+                {
+                    "answer": "Никогда ",
+                    "point": 1
+                },
+                {
+                    "answer": "Почти всегда ",
+                    "point": 3
+                },
+                {
+                    "answer": "Почти никогда",
+                    "point": 2
+                },
+                {
+                    "answer": "Часто",
+                    "point": 4
+                }
+            ],
+            "rightAnswer": 0,
+            "selected": null
+        },
+        {
+            "question": "6. Я расстроен на занятиях ",
+            "answers": [
+                {
+                    "answer": "Верно ",
+                    "point": 1
+                },
+                {
+                    "answer": "Никогда ",
+                    "point": 4
+                },
+                {
+                    "answer": "Почти всегда ",
+                    "point": 2
+                },
+                {
+                    "answer": "Почти никогда",
+                    "point": 3
+                },
+                {
+                    "answer": "Часто",
+                    "point": 1
+                }
+            ],
+            "rightAnswer": 0,
+            "selected": null
+        },
+        {
+            "question": "7. Меня волнуют возможные неудачи при выполнении заданий",
+            "answers": [
+                {
+                    "answer": "Никогда ",
+                    "point": 4
+                },
+                {
+                    "answer": "Почти всегда ",
+                    "point": 2
+                },
+                {
+                    "answer": "Почти никогда",
+                    "point": 3
+                },
+                {
+                    "answer": "Часто",
+                    "point": 1
+                }
+            ],
+            "rightAnswer": 0,
+            "selected": null
+        },
+        {
+            "question": "8. Я ощущаю душевный покой при выполнении практических работ на компьютере.",
+            "answers": [
+                {
+                    "answer": "Верно ",
+                    "point": 1
+                },
+                {
+                    "answer": "Никогда ",
+                    "point": 1
+                },
+                {
+                    "answer": "Почти всегда ",
+                    "point": 3
+                },
+                {
+                    "answer": "Почти никогда",
+                    "point": 2
+                },
+                {
+                    "answer": "Часто",
+                    "point": 4
+                }
+            ],
+            "rightAnswer": 0,
+            "selected": null
+        },
+        {
+            "question": "9. Я встревожен на занятиях ",
+            "answers": [
+                {
+                    "answer": "Никогда ",
+                    "point": 4
+                },
+                {
+                    "answer": "Почти всегда ",
+                    "point": 2
+                },
+                {
+                    "answer": "Почти никогда",
+                    "point": 3
+                },
+                {
+                    "answer": "Часто",
+                    "point": 1
+                }
+            ],
+            "rightAnswer": 0,
+            "selected": null
+        },
+        {
+            "question": "10. Я испытываю чувство внутреннего удовлетворения при выполнении практических работ",
+            "answers": [
+                {
+                    "answer": "Никогда ",
+                    "point": 1
+                },
+                {
+                    "answer": "Почти всегда ",
+                    "point": 3
+                },
+                {
+                    "answer": "Почти никогда",
+                    "point": 2
+                },
+                {
+                    "answer": "Часто",
+                    "point": 4
+                }
+            ],
+            "rightAnswer": 0,
+            "selected": null
+        },
+        {
+            "question": " 11. Я уверен(а) в себе.",
+            "answers": [
+                {
+                    "answer": "Никогда ",
+                    "point": 1
+                },
+                {
+                    "answer": "Почти всегда ",
+                    "point": 3
+                },
+                {
+                    "answer": "Почти никогда",
+                    "point": 2
+                },
+                {
+                    "answer": "Часто",
+                    "point": 4
+                }
+            ],
+            "rightAnswer": 0,
+            "selected": null
+        },
+        {
+            "question": " 12. Я нервничаю при работе за компьютером",
+            "answers": [
+                {
+                    "answer": "Никогда ",
+                    "point": 4
+                },
+                {
+                    "answer": "Почти всегда ",
+                    "point": 2
+                },
+                {
+                    "answer": "Почти никогда",
+                    "point": 3
+                },
+                {
+                    "answer": "Часто",
+                    "point": 1
+                }
+            ],
+            "rightAnswer": 0,
+            "selected": null
+        },
+        {
+            "question": "13. Я не нахожу себе места, когда выполняю практическую работу на ПК",
+            "answers": [
+                {
+                    "answer": "Никогда ",
+                    "point": 4
+                },
+                {
+                    "answer": "Почти всегда ",
+                    "point": 2
+                },
+                {
+                    "answer": "Почти никогда",
+                    "point": 3
+                },
+                {
+                    "answer": "Часто",
+                    "point": 1
+                }
+            ],
+            "rightAnswer": 0,
+            "selected": null
+        },
+        {
+            "question": "14. Я взвинчен при работе на ПК ",
+            "answers": [
+                {
+                    "answer": "Никогда ",
+                    "point": 4
+                },
+                {
+                    "answer": "Почти всегда ",
+                    "point": 2
+                },
+                {
+                    "answer": "Почти никогда",
+                    "point": 3
+                },
+                {
+                    "answer": "Часто",
+                    "point": 1
+                }
+            ],
+            "rightAnswer": 0,
+            "selected": null
+        },
+        {
+            "question": "15. Я не чувствую скованности",
+            "answers": [
+                {
+                    "answer": "Никогда ",
+                    "point": 1
+                },
+                {
+                    "answer": "Почти всегда ",
+                    "point": 3
+                },
+                {
+                    "answer": "Почти никогда",
+                    "point": 2
+                },
+                {
+                    "answer": "Часто",
+                    "point": 4
+                }
+            ],
+            "rightAnswer": 0,
+            "selected": null
+        },
+        {
+            "question": "16. Я доволен своими результатами",
+            "answers": [
+                {
+                    "answer": "Никогда ",
+                    "point": 1
+                },
+                {
+                    "answer": "Почти всегда ",
+                    "point": 3
+                },
+                {
+                    "answer": "Почти никогда",
+                    "point": 2
+                },
+                {
+                    "answer": "Часто",
+                    "point": 4
+                }
+            ],
+            "rightAnswer": 0,
+            "selected": null
+        },
+        {
+            "question": "17. Я озабочен своими неудачами",
+            "answers": [
+                {
+                    "answer": "Никогда ",
+                    "point": 4
+                },
+                {
+                    "answer": "Почти всегда ",
+                    "point": 2
+                },
+                {
+                    "answer": "Почти никогда",
+                    "point": 3
+                },
+                {
+                    "answer": "Часто",
+                    "point": 1
+                }
+            ],
+            "rightAnswer": 0,
+            "selected": null
+        },
+        {
+            "question": "18. Я слишком возбужден и мне не по себе, когда слышу задание",
+            "answers": [
+                {
+                    "answer": "Никогда ",
+                    "point": 4
+                },
+                {
+                    "answer": "Почти всегда ",
+                    "point": 2
+                },
+                {
+                    "answer": "Почти никогда",
+                    "point": 3
+                },
+                {
+                    "answer": "Часто",
+                    "point": 1
+                }
+            ],
+            "rightAnswer": 0,
+            "selected": null
+        },
+        {
+            "question": "19. Мне радостно учиться новому при работе с ПК ",
+            "answers": [
+                {
+                    "answer": "Никогда ",
+                    "point": 1
+                },
+                {
+                    "answer": "Почти всегда ",
+                    "point": 3
+                },
+                {
+                    "answer": "Почти никогда",
+                    "point": 2
+                },
+                {
+                    "answer": "Часто",
+                    "point": 4
+                }
+            ],
+            "rightAnswer": 0,
+            "selected": null
+        },
+        {
+            "question": "20. Мне приятно учиться",
+            "answers": [
+                {
+                    "answer": "Никогда ",
+                    "point": 1
+                },
+                {
+                    "answer": "Почти всегда ",
+                    "point": 3
+                },
+                {
+                    "answer": "Почти никогда",
+                    "point": 2
+                },
+                {
+                    "answer": "Часто",
+                    "point": 4
+                }
+            ],
+            "rightAnswer": 0,
+            "selected": null
+        }
+    ],
+    "chartMode": true
+}
