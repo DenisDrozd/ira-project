@@ -3,6 +3,7 @@ import * as q01 from './tests/quiz01.json';
 import * as q02 from './tests/quiz02.json';
 import * as q03 from './tests/quiz03.json';
 import * as q04 from './tests/quiz04.json';
+import * as q05 from './tests/quiz05.json';
 
 @Component({
     selector: 'app-body',
@@ -23,7 +24,8 @@ export class BodyComponent {
     quizList02 = [
         q02,
         q03,
-        q04
+        q04,
+        q05,
     ];
 
     complete = {
@@ -39,6 +41,10 @@ export class BodyComponent {
             points: 0,
             ready: false
         },
+        3: {
+            points: 0,
+            ready: false
+        },
         100: {
             points: 0,
             full: 0,
@@ -48,7 +54,7 @@ export class BodyComponent {
 
     currentTest;
     compeleAllTest = false;
-    pointsGraph;
+    pointsGraph = 0;
 
     checkComplete() {
         this.pointsGraph = 0;
@@ -60,7 +66,9 @@ export class BodyComponent {
             }
             this.compeleAllTest = true;
 
-            this.pointsGraph += this.complete[key].points;
+            if(this.currentTest !== 100) {
+                this.pointsGraph += this.complete[key].points;
+            }
         }
     }
 
@@ -91,7 +99,7 @@ export class BodyComponent {
                 if((counter + 1) === arr.length) {
                     this.successTest = true;
                     this.complete[this.currentTest].ready = true;
-                    this.complete[this.currentTest].points = this.pointResult;
+                    this.complete[this.currentTest].points = this.result;
                     this.complete[this.currentTest].full = arr.length;
                     this.checkComplete();
                 }
