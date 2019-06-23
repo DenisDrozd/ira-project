@@ -122,6 +122,10 @@ export class BodyComponent {
         }
     }
 
+    sumPoints() {
+        return this.complete[100].points + this.complete[0].points + this.complete[1].points + this.complete[2].points + this.complete[3].points + this.complete[4].points + this.complete[5].points
+    }
+
     selectQuiz(list, index) {
         this.selectedQuiz = list;
         this.firstCheck = true;

@@ -103,12 +103,30 @@
 
                 <div *ngIf="compeleAllTest"
                      class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
-                    <!--<div class="">-->
-                        <!--Результат, по баллам: {{complete[100].points}} из {{complete[100].full}}-->
-                    <!--</div>-->
-                    <!--<div class="">-->
-                        <!--Результат психологический : {{pointsGraph}}-->
-                    <!--</div>-->
+                    <ng-container *ngIf="sumPoints() >= 203">
+                        <div class="graph-title">
+                            ВЫСОКИЙ
+                        </div>
+                            <div class="graph-description">
+                            Молодец! У тебя высокий уровень компьютерной грамотности! Продолжай в том же духе, тебе еще есть к чему стремиться!
+                        </div>
+                    </ng-container>
+                    <ng-container *ngIf="sumPoints() >= 138 && sumPoints() < 202">
+                        <div class="graph-title">
+                            СРЕДНИЙ
+                        </div>
+                        <div class="graph-description">
+                            Поздравляем, у тебя средний уровень компьютерной грамотности. Проанализируй критерии, в которых ты не дотянул до высокого. Покажи этот результат своему преподавателю, чтобы вы вместе продумали как работать дальше.
+                        </div>
+                    </ng-container>
+                    <ng-container *ngIf="sumPoints() < 137">
+                        <div class="graph-title">
+                            НИЗКИЙ
+                        </div>
+                        <div class="graph-description">
+                            Твой уровень компьютерной грамотности низкий. Но это не повод для грусти, а скорее повод задуматься какие критерии тебе нужно подтянуть. Обратись к преподавателю за помощью.
+                        </div>
+                    </ng-container>
 
                     <div class="graph">
                         <div class="graph-item">
