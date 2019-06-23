@@ -36,6 +36,7 @@
                             <div *ngIf="!(successTest && checkQuestion(answers))"
                                  [id]="'id' + (answersIndex + 1)"
                                  class="quiz-answers"
+                                 [class.quiz-answers_finished]="successTest"
                                  [class.quiz-answers_empty]="answers.selected === null && !firstCheck">
                                 <div class="quiz-answers-title">
                                     {{answers.question}}
@@ -43,7 +44,7 @@
                                 <div class="quiz-answer-container">
                                     <div *ngFor="let answer of answers.answers; let answerIndex = index"
                                          class="quiz-answer"
-                                         [class.quiz-answer_correct]="successTest && highlightError(answers, answerIndex)"
+                                         [class.quiz-answer_correct]="successTest && highlightError(answers, answerIndex) && !selectedQuiz.default.chartMode"
                                          [class.quiz-answer_selected]="answers.selected === answerIndex"
                                          (click)="selectedQuiz.default.list[answersIndex].selected = answerIndex">
                                         {{answer.answer}}
@@ -63,9 +64,12 @@
                          (click)="selectedQuiz = false">
                         Это Кнопка НАЗАД, временная
                     </div>
-                    <div *ngIf="successTest"
+                    <div *ngIf="successTest && !selectedQuiz.default.chartMode"
                          class="">
                         Набрано {{result}} баллов из {{selectedQuiz.default.list.length}}
+                    </div>
+                    <div *ngIf="successTest && selectedQuiz.default.chartMode">
+                        Набрано {{pointResult}} ----
                     </div>
                 </ng-template>
 
