@@ -5,10 +5,10 @@
                 <ng-container *ngIf="!selectedQuiz; else quiz">
                     <div class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
                         <div class="quiz-list-title quiz-list-title_first">
-                            Раздел 1
+                            Раздел 1 с множеством вопросов
                         </div>
                     </div>
-                    <ng-container *ngFor="let quiz of quizList;">
+                    <ng-container *ngFor="let quiz of quizList01;">
                         <div class="col_extrasmall-12 col_small-12 col_medium-6 col_large-4">
                             <div class="island"
                                  (click)="selectQuiz(quiz)">
@@ -20,9 +20,19 @@
                     </ng-container>
                     <div class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
                         <div class="quiz-list-title">
-                            Раздел 2
+                            Раздел 2 с вопрососами, где будет график
                         </div>
                     </div>
+                    <ng-container *ngFor="let quiz of quizList02;">
+                        <div class="col_extrasmall-12 col_small-12 col_medium-6 col_large-4">
+                            <div class="island"
+                                 (click)="selectQuiz(quiz)">
+                                <div class="island-title">
+                                    {{quiz.default.topic}}
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
                 </ng-container>
 
                 <ng-template #quiz>

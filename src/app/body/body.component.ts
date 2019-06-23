@@ -1,6 +1,8 @@
 import {Component} from '@angular/core';
 import * as q01 from './tests/quiz01.json';
 import * as q02 from './tests/quiz02.json';
+import * as q03 from './tests/quiz03.json';
+import * as q04 from './tests/quiz04.json';
 
 @Component({
     selector: 'app-body',
@@ -14,9 +16,14 @@ export class BodyComponent {
     firstCheck = true;
     successTest = false;
 
-    quizList = [
-        q01,
-        q02
+    quizList01 = [
+        q01
+    ];
+
+    quizList02 = [
+        q02,
+        q03,
+        q04
     ];
 
     selectQuiz(list) {
