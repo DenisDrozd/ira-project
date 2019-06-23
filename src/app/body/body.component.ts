@@ -33,34 +33,69 @@ export class BodyComponent {
     ];
 
     complete = {
-        0: {
-            points: 0,
-            ready: false
-        },
-        1: {
-            points: 0,
-            ready: false
-        },
-        2: {
-            points: 0,
-            ready: false
-        },
-        3: {
-            points: 0,
-            ready: false
-        },
-        4: {
-            points: 0,
-            ready: false
-        },
-        5: {
-            points: 0,
-            ready: false
-        },
         100: {
             points: 0,
             full: 0,
-            ready: false
+            ready: false,
+            low: 20,
+            middle: 40,
+            high: 55,
+            limit: 60,
+            topic: 'Проверка знаний и умений'
+        },
+        0: {
+            points: 0,
+            ready: false,
+            low: 1,
+            middle: 2,
+            high: 3,
+            limit: 3,
+            topic: 'Оценивание самостоятельности при работе за компьютером'
+        },
+        1: {
+            points: 0,
+            ready: false,
+            low: 1,
+            middle: 2,
+            high: 3,
+            limit: 3,
+            topic: 'Познавательная самостоятельность'
+        },
+        2: {
+            points: 0,
+            ready: false,
+            low: 1,
+            middle: 2,
+            high: 3,
+            limit: 3,
+            topic: 'Совершенствование своих умений и навыков '
+        },
+        3: {
+            points: 0,
+            ready: false,
+            low: 0,
+            middle: 10,
+            high: 15,
+            limit: 20,
+            topic: 'Творческая активность '
+        },
+        4: {
+            points: 0,
+            ready: false,
+            low: 1,
+            middle: 42,
+            high: 60,
+            limit: 64,
+            topic: 'Мотивы и установки'
+        },
+        5: {
+            points: 0,
+            ready: false,
+            low: 1,
+            middle: 40,
+            high: 60,
+            limit: 80,
+            topic: 'Тревожность'
         }
     };
 

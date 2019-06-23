@@ -102,12 +102,127 @@
                 </ng-template>
 
                 <div *ngIf="compeleAllTest"
-                     class="graph-list">
-                    <div class="">
-                        Результат, по баллам: {{complete[100].points}} из {{complete[100].full}}
-                    </div>
-                    <div class="">
-                        Результат психологический : {{pointsGraph}}
+                     class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
+                    <!--<div class="">-->
+                        <!--Результат, по баллам: {{complete[100].points}} из {{complete[100].full}}-->
+                    <!--</div>-->
+                    <!--<div class="">-->
+                        <!--Результат психологический : {{pointsGraph}}-->
+                    <!--</div>-->
+
+                    <div class="graph">
+                        <div class="graph-item">
+                            <div class="graph-item-low"
+                                 [style.bottom.%]="complete[100].low / complete[100].limit * 100"></div>
+                            <div class="graph-item-middle"
+                                 [style.bottom.%]="complete[100].middle / complete[100].limit * 100"></div>
+                            <div class="graph-item-high"
+                                 [style.bottom.%]="complete[100].high / complete[100].limit * 100"></div>
+                            <div class="graph-item-result"
+                                 [class.graph-item-result_low]="complete[100].low <= complete[100].points"
+                                 [class.graph-item-result_middle]="complete[100].middle <= complete[100].points"
+                                 [class.graph-item-result_high]="complete[100].high <= complete[100].points"
+                                 [style.top.%]="(complete[100].limit -complete[100].points) / complete[100].limit * 100"></div>
+                            <div class="graph-item-text">
+                                {{complete[100].topic}}
+                            </div>
+                        </div>
+                        <div class="graph-item">
+                            <div class="graph-item-low"
+                                 [style.bottom.%]="complete[0].low / complete[0].limit * 100"></div>
+                            <div class="graph-item-middle"
+                                 [style.bottom.%]="complete[0].middle / complete[0].limit * 100"></div>
+                            <div class="graph-item-high"
+                                 [style.bottom.%]="complete[0].high / complete[0].limit * 100"></div>
+                            <div class="graph-item-result"
+                                 [class.graph-item-result_low]="complete[0].low <= complete[0].points"
+                                 [class.graph-item-result_middle]="complete[0].middle <= complete[0].points"
+                                 [class.graph-item-result_high]="complete[0].high <= complete[0].points"
+                                 [style.top.%]="(complete[0].limit - complete[0].points) / complete[0].limit * 100"></div>
+                            <div class="graph-item-text">
+                                {{complete[0].topic}}
+                            </div>
+                        </div>
+                        <div class="graph-item">
+                            <div class="graph-item-low"
+                                 [style.bottom.%]="complete[1].low / complete[1].limit * 100"></div>
+                            <div class="graph-item-middle"
+                                 [style.bottom.%]="complete[1].middle / complete[1].limit * 100"></div>
+                            <div class="graph-item-high"
+                                 [style.bottom.%]="complete[1].high / complete[1].limit * 100"></div>
+                            <div class="graph-item-result"
+                                 [class.graph-item-result_low]="complete[1].low <= complete[1].points"
+                                 [class.graph-item-result_middle]="complete[1].middle <= complete[1].points"
+                                 [class.graph-item-result_high]="complete[1].high <= complete[1].points"
+                                 [style.top.%]="(complete[1].limit - complete[1].points) / complete[1].limit * 100"></div>
+                            <div class="graph-item-text">
+                                {{complete[1].topic}}
+                            </div>
+                        </div>
+                        <div class="graph-item">
+                            <div class="graph-item-low"
+                                 [style.bottom.%]="complete[2].low / complete[2].limit * 100"></div>
+                            <div class="graph-item-middle"
+                                 [style.bottom.%]="complete[2].middle / complete[2].limit * 100"></div>
+                            <div class="graph-item-high"
+                                 [style.bottom.%]="complete[2].high / complete[2].limit * 100"></div>
+                            <div class="graph-item-result"
+                                 [class.graph-item-result_low]="complete[2].low <= complete[2].points"
+                                 [class.graph-item-result_middle]="complete[2].middle <= complete[2].points"
+                                 [class.graph-item-result_high]="complete[2].high <= complete[2].points"
+                                 [style.top.%]="(complete[2].limit - complete[2].points) / complete[2].limit * 100"></div>
+                            <div class="graph-item-text">
+                                {{complete[2].topic}}
+                            </div>
+                        </div>
+                        <div class="graph-item">
+                            <div class="graph-item-low"
+                                 [style.bottom.%]="complete[3].low / complete[3].limit * 100"></div>
+                            <div class="graph-item-middle"
+                                 [style.bottom.%]="complete[3].middle / complete[3].limit * 100"></div>
+                            <div class="graph-item-high"
+                                 [style.bottom.%]="complete[3].high / complete[3].limit * 100"></div>
+                            <div class="graph-item-result"
+                                 [class.graph-item-result_low]="complete[3].low <= complete[3].points"
+                                 [class.graph-item-result_middle]="complete[3].middle <= complete[3].points"
+                                 [class.graph-item-result_high]="complete[3].high <= complete[3].points"
+                                 [style.top.%]="(complete[3].limit - complete[3].points) / complete[3].limit * 100"></div>
+                            <div class="graph-item-text">
+                                {{complete[3].topic}}
+                            </div>
+                        </div>
+                        <div class="graph-item">
+                            <div class="graph-item-low"
+                                 [style.bottom.%]="complete[4].low / complete[4].limit * 100"></div>
+                            <div class="graph-item-middle"
+                                 [style.bottom.%]="complete[4].middle / complete[4].limit * 100"></div>
+                            <div class="graph-item-high"
+                                 [style.bottom.%]="complete[4].high / complete[4].limit * 100"></div>
+                            <div class="graph-item-result"
+                                 [class.graph-item-result_low]="complete[4].low <= complete[4].points"
+                                 [class.graph-item-result_middle]="complete[4].middle <= complete[4].points"
+                                 [class.graph-item-result_high]="complete[4].high <= complete[4].points"
+                                 [style.top.%]="(complete[4].limit - complete[4].points) / complete[4].limit * 100"></div>
+                            <div class="graph-item-text">
+                                {{complete[4].topic}}
+                            </div>
+                        </div>
+                        <div class="graph-item">
+                            <div class="graph-item-low"
+                                 [style.bottom.%]="complete[5].low / complete[5].limit * 100"></div>
+                            <div class="graph-item-middle"
+                                 [style.bottom.%]="complete[5].middle / complete[5].limit * 100"></div>
+                            <div class="graph-item-high"
+                                 [style.bottom.%]="complete[5].high / complete[5].limit * 100"></div>
+                            <div class="graph-item-result"
+                                 [class.graph-item-result_low]="complete[5].low <= complete[5].points"
+                                 [class.graph-item-result_middle]="complete[5].middle <= complete[5].points"
+                                 [class.graph-item-result_high]="complete[5].high <= complete[5].points"
+                                 [style.top.%]="(complete[5].limit -complete[5].points) / complete[5].limit * 100"></div>
+                            <div class="graph-item-text">
+                                {{complete[5].topic}}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
