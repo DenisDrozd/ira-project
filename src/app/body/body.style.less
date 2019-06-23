@@ -51,6 +51,44 @@
     }
 }
 
+.button {
+    .transition(all);
+    .h5();
+    position: relative;
+    z-index: 111;
+    transform: translateY(0);
+    border: 1px solid @border-color;
+    border-radius: @radius;
+    margin-bottom: 24px;
+    background: fade(@island-bg-hover, 8), #fff;
+    cursor: pointer;
+
+    margin-top: 32px;
+
+    @media @tablet {
+        padding: 12px;
+    }
+
+    @media @desktop-min {
+        padding: 24px;
+    }
+
+    &:hover {
+        transform: translateY(-8px);
+        background-color: fade(@island-bg-hover, 56);
+    }
+
+    &_back {
+        position: fixed;
+        right: 10%;
+        bottom: 10%;
+    }
+}
+
+.quiz-result {
+    .h3();
+}
+
 .quiz-answers {
     .transition(background-color);
     background-color: @white;

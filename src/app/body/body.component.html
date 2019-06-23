@@ -71,17 +71,26 @@
                     </div>
 
                     <div *ngIf="successTest">
-                        Результат принят
+                        <div class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
+                            <div class="quiz-result">
+                                Результат принят
+                            </div>
+                        </div>
                     </div>
 
                     <div *ngIf="!successTest"
-                         style="cursor: pointer; padding: 20px; background: grey;"
-                         (click)="checkResult()">
-                        Проверка результата
+                         class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
+                        <div style="display: inline-block">
+                            <div class="button"
+                                 (click)="checkResult()">
+                                Отправить
+                            </div>
+                        </div>
                     </div>
-                    <div style="cursor: pointer; padding: 20px; background: grey;"
+
+                    <div class="button button_back"
                          (click)="selectedQuiz = false">
-                        Это Кнопка НАЗАД, временная
+                        Назад
                     </div>
                     <!--<div *ngIf="successTest && !selectedQuiz.default.chartMode"-->
                          <!--class="">-->
