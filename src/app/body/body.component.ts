@@ -4,6 +4,7 @@ import * as q02 from './tests/quiz02.json';
 import * as q03 from './tests/quiz03.json';
 import * as q04 from './tests/quiz04.json';
 import * as q05 from './tests/quiz05.json';
+import * as q06 from './tests/quiz06.json';
 
 @Component({
     selector: 'app-body',
@@ -26,6 +27,7 @@ export class BodyComponent {
         q03,
         q04,
         q05,
+        q06
     ];
 
     complete = {
@@ -45,6 +47,10 @@ export class BodyComponent {
             points: 0,
             ready: false
         },
+        4: {
+            points: 0,
+            ready: false
+        },
         100: {
             points: 0,
             full: 0,
@@ -60,15 +66,18 @@ export class BodyComponent {
         this.pointsGraph = 0;
 
         for(let key in this.complete) {
+            console.log('---');
+            console.log(key, this.pointsGraph, this.complete[key]);
             if (this.complete[key].ready === false) {
                 this.compeleAllTest = false;
                 break;
             }
-            this.compeleAllTest = true;
 
-            if(this.currentTest !== 100) {
+            if (+key !== 100) {
                 this.pointsGraph += this.complete[key].points;
             }
+
+            this.compeleAllTest = true;
         }
     }
 
