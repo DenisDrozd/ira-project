@@ -2,36 +2,40 @@
     <div class="row row_center">
         <div class="col_extrasmall-12 col_small-12 col_medium-10 col_large-8">
             <div class="row">
-                <ng-container *ngIf="!selectedQuiz; else quiz">
-                    <div class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
-                        <div class="quiz-list-title quiz-list-title_first">
-                            Раздел 1 с множеством вопросов
-                        </div>
-                    </div>
-                    <ng-container *ngFor="let quiz of quizList01;">
+                <ng-container *ngIf="!compeleAllTest">
+                    <ng-container *ngIf="!selectedQuiz; else quiz">
                         <div class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
-                            <div class="island"
-                                 (click)="selectQuiz(quiz)">
-                                <div class="island-title">
-                                    {{quiz.default.topic}}
-                                </div>
+                            <div class="quiz-list-title quiz-list-title_first">
+                                Раздел 1 с множеством вопросов
                             </div>
                         </div>
-                    </ng-container>
-                    <div class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
-                        <div class="quiz-list-title">
-                            Раздел 2 с вопрососами, где будет график
-                        </div>
-                    </div>
-                    <ng-container *ngFor="let quiz of quizList02;">
-                        <div class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
-                            <div class="island"
-                                 (click)="selectQuiz(quiz)">
-                                <div class="island-title">
-                                    {{quiz.default.topic}}
+                        <ng-container *ngFor="let quiz of quizList01;">
+                            <div class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
+                                <div class="island"
+                                     [class.island_ready]="complete[100].ready"
+                                     (click)="selectQuiz(quiz, 100)">
+                                    <div class="island-title">
+                                        {{quiz.default.topic}}
+                                    </div>
                                 </div>
                             </div>
+                        </ng-container>
+                        <div class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
+                            <div class="quiz-list-title">
+                                Раздел 2 с вопрососами, где будет график
+                            </div>
                         </div>
+                        <ng-container *ngFor="let quiz of quizList02; let index = index">
+                            <div class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
+                                <div class="island"
+                                     [class.island_ready]="complete[index].ready"
+                                     (click)="selectQuiz(quiz, index)">
+                                    <div class="island-title">
+                                        {{quiz.default.topic}}
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-container>
                     </ng-container>
                 </ng-container>
 
@@ -43,7 +47,8 @@
                     </div>
                     <div class="col_extrasmall-12 col_small-12 col_medium-12 col_large-12">
                         <ng-container *ngFor="let answers of selectedQuiz.default.list; let answersIndex = index">
-                            <div *ngIf="!(successTest && (checkQuestion(answers) || selectedQuiz.default.chartMode))"
+                            <!--checkQuestion(answers) || selectedQuiz.default.chartMode-->
+                            <div *ngIf="!(successTest)"
                                  [id]="'id' + (answersIndex + 1)"
                                  class="quiz-answers"
                                  [class.quiz-answers_finished]="successTest"
@@ -74,16 +79,24 @@
                          (click)="selectedQuiz = false">
                         Это Кнопка НАЗАД, временная
                     </div>
-                    <div *ngIf="successTest && !selectedQuiz.default.chartMode"
-                         class="">
-                        Набрано {{result}} баллов из {{selectedQuiz.default.list.length}}
-                    </div>
-                    <div *ngIf="successTest && selectedQuiz.default.chartMode">
-                        Набрано {{pointResult}} ----
-                    </div>
+                    <!--<div *ngIf="successTest && !selectedQuiz.default.chartMode"-->
+                         <!--class="">-->
+                        <!--Набрано {{result}} баллов из {{selectedQuiz.default.list.length}}-->
+                    <!--</div>-->
+                    <!--<div *ngIf="successTest && selectedQuiz.default.chartMode">-->
+                        <!--Набрано {{pointResult}} &#45;&#45;&#45;&#45;-->
+                    <!--</div>-->
                 </ng-template>
 
-
+                <div *ngIf="compeleAllTest"
+                     class="graph-list">
+                    <div class="">
+                        Результат, по баллам: {{complete[100].points}} из {{complete[100].full}}
+                    </div>
+                    <div class="">
+                        Результат психологический : {{pointsGraph}}
+                    </div>
+                </div>
             </div>
         </div>
     </div>

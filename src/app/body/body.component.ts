@@ -26,10 +26,49 @@ export class BodyComponent {
         q04
     ];
 
-    selectQuiz(list) {
+    complete = {
+        0: {
+            points: 0,
+            ready: false
+        },
+        1: {
+            points: 0,
+            ready: false
+        },
+        2: {
+            points: 0,
+            ready: false
+        },
+        100: {
+            points: 0,
+            full: 0,
+            ready: false
+        }
+    };
+
+    currentTest;
+    compeleAllTest = false;
+    pointsGraph;
+
+    checkComplete() {
+        this.pointsGraph = 0;
+
+        for(let key in this.complete) {
+            if (this.complete[key].ready === false) {
+                this.compeleAllTest = false;
+                break;
+            }
+            this.compeleAllTest = true;
+
+            this.pointsGraph += this.complete[key].points;
+        }
+    }
+
+    selectQuiz(list, index) {
         this.selectedQuiz = list;
         this.firstCheck = true;
         this.successTest = false;
+        this.currentTest = index;
     }
 
     checkResult() {
@@ -51,6 +90,10 @@ export class BodyComponent {
 
                 if((counter + 1) === arr.length) {
                     this.successTest = true;
+                    this.complete[this.currentTest].ready = true;
+                    this.complete[this.currentTest].points = this.pointResult;
+                    this.complete[this.currentTest].full = arr.length;
+                    this.checkComplete();
                 }
             }
         } else {
@@ -67,6 +110,9 @@ export class BodyComponent {
 
                 if((counter + 1) === arr.length) {
                     this.successTest = true;
+                    this.complete[this.currentTest].ready = true;
+                    this.complete[this.currentTest].points = this.pointResult;
+                    this.checkComplete();
                 }
             }
         }
